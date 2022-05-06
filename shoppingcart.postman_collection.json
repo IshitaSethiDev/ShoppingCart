@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "1ce4339f-88c0-4dcf-a582-d599346cffe9",
+		"name": "shoppingcart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/product/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"product",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/product/name/bottle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"product",
+						"name",
+						"bottle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product to the cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"productId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8101/cart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"cart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product to the cart Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"productId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8101/cart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"cart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remoe product from the cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"productId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8101/cart/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"cart",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quantity of the product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"productId\": 1,\n    \"quantity\":9\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8101/cart/update-quantity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"cart",
+						"update-quantity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View products in the cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"productId\": 1,\n    \"quantity\":9\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8101/cart/view-cart/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"cart",
+						"view-cart",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
